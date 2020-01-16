@@ -4,9 +4,14 @@ chrome.runtime.onMessage.addListener(
         
             var url = request.data.toString()
             if (url.startsWith("https://www.instagram.com/p/"))
-            {
-                var url = request.data + "media/?size=l";
-                chrome.runtime.sendMessage({"message": "open_new_tab", "url": url});
+            {   
+                if (url.match(/\//g).length > 4)
+                {
+                    var url = url.substr(0, url.lastIndexOf("\/"))
+                }
+  
+                newUrl = url + "/media/?size=l"
+                chrome.runtime.sendMessage({"message": "open_new_tab", "url": newUrl});
             }
         }
     }
