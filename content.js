@@ -10,7 +10,7 @@ chrome.runtime.onMessage.addListener(
                     var url = url.substr(0, url.lastIndexOf("\/"))
                 }
   
-                newUrl = url + "/media/?size=l"
+                var newUrl = url + "/media/?size=l"
                 chrome.runtime.sendMessage({"message": "open_new_tab", "url": newUrl});
             }
         }
