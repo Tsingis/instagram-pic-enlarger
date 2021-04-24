@@ -3,10 +3,11 @@
 Opens profile's enlarged picture from the current tab to a new tab
 
 Installation:
-1. Enable Developer mode
-2. Load unpacked & choose directory with the code, manifest and icon
-3. Turn on extension unless it automatically wasn't
-4. Pin extension to toolbar for quick access
+1. Go to chrome://extensions
+2. Enable Developer mode
+3. Load unpacked & choose directory with the code, manifest and icon
+4. Turn on extension unless it automatically wasn't
+5. Pin extension to toolbar for quick access
 
 Instructions:
 1. Open Instagram post (image or video)
