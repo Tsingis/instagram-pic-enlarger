@@ -4,8 +4,8 @@ chrome.runtime.onMessage.addListener(
             let url = request.data.toString();
             if (url.startsWith("https://www.instagram.com/p/")) {
                 msg = {
-                    "command": "open_new_tab",
-                    "data": getLargePictureUrl(url)
+                    command: "open_new_tab",
+                    data: getLargePictureUrl(url)
                 };
                 chrome.runtime.sendMessage(msg);
             }

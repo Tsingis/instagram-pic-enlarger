@@ -1,8 +1,8 @@
 chrome.action.onClicked.addListener(async () => {
     let activeTab = await getActiveTab();
     let msg = {
-        "command": "clicked_browser_action",
-        "data": activeTab.url
+        command: "clicked_browser_action",
+        data: activeTab.url
     };
     chrome.tabs.sendMessage(activeTab.id, msg);
 });
@@ -10,7 +10,7 @@ chrome.action.onClicked.addListener(async () => {
 chrome.runtime.onMessage.addListener(
     (request, sender, response) => {
         if (request.command === "open_new_tab") {
-            chrome.tabs.create({ "url": request.data });
+            chrome.tabs.create({ url: request.data });
         }
     });
 
