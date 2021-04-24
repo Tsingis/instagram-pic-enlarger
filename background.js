@@ -14,6 +14,9 @@ chrome.browserAction.onClicked.addListener(() => {
 chrome.runtime.onMessage.addListener(
     (request, sender, response) => {
         if (request.message === "open_new_tab") {
-            chrome.tabs.create({"url": request.url});
+            var url = {
+                "url": request.url
+            }
+            chrome.tabs.create(url)
         }
 });

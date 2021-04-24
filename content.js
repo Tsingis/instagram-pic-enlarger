@@ -12,7 +12,6 @@ chrome.runtime.onMessage.addListener(
                     "message": "open_new_tab",
                     "url": url + "/media/?size=l"
                 }
-                
                 chrome.runtime.sendMessage(msg);
             }
         }
