@@ -1,19 +1,21 @@
 chrome.runtime.onMessage.addListener(
     (request, sender, response) => {
-        if (request.message === "clicked_browser_action") {
-            var url = request.data.toString()
-            if (url.startsWith("https://www.instagram.com/p/"))
-            {   
-                if (url.match(/\//g).length > 4) {
-                    url = url.substr(0, url.lastIndexOf("\/"))
-                }
-                
+        if (request.command === "clicked_browser_action") {
+            let url = request.data.toString()
+            if (url.startsWith("https://www.instagram.com/p/")) {
                 msg = {
-                    "message": "open_new_tab",
-                    "url": url + "/media/?size=l"
+                    "command": "open_new_tab",
+                    "data": getLargePictureUrl(url)
                 }
                 chrome.runtime.sendMessage(msg);
             }
         }
     }
-);
+)
+
+const getLargePictureUrl = (url) => {
+    if (url.match(/\//g).length > 4) {
+        url = url.substr(0, url.lastIndexOf("\/"))
+    }
+    return url + "/media/?size=l"
+}
