@@ -59,20 +59,20 @@ const createAlertBox = (text) => {
 
     alertBox.appendChild(closeBtn);
     return alertBox;
-}
+};
 
 const showAlertBox = (text) => {
     const alertBox = createAlertBox(text);
     document.body.appendChild(alertBox);
-}
+};
 
 const hideAlertBox = (alertBox) => {
     alertBox.style.display = "none";
-}
+};
 
 const autoHideAlertBox = (durationInSeconds) => {
     setInterval(() => {
         const alertBox = document.getElementById("enlarger-alert-box");
         hideAlertBox(alertBox);
-    }, durationInSeconds * 1000)
-}
+    }, durationInSeconds * 1000);
+};
