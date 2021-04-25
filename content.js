@@ -27,14 +27,13 @@ const createAlertBox = (text) => {
   alertBox = document.createElement("div");
   alertBox.id = "enlarger-alert-box";
   alertBox.innerText = text;
-  alertBox.style.fontStyle
   alertBox.style.boxSizing = "border-box";
   alertBox.style.font = "25px Verdana, sans-serif";
   alertBox.style.position = "fixed";
   alertBox.style.top = "1em";
   alertBox.style.right = "1em";
   alertBox.style.zIndex = 9999999;
-  alertBox.style.padding = "5px";
+  alertBox.style.padding = "10px";
   alertBox.style.borderRadius = "5px"
   alertBox.style.color = "white";
   alertBox.style.backgroundColor = "#ff9800";
