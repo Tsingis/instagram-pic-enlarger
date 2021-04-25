@@ -1,6 +1,6 @@
 chrome.action.onClicked.addListener(async () => {
-  let activeTab = await getActiveTab();
-  let msg = {
+  const activeTab = await getActiveTab();
+  const msg = {
     command: "clicked_browser_action",
     data: activeTab
   };
@@ -15,10 +15,10 @@ chrome.runtime.onMessage.addListener(
   });
 
 const getActiveTab = async () => {
-  let queryOptions = {
+  const queryOptions = {
     active: true,
     currentWindow: true
   };
-  let [activeTab] = await chrome.tabs.query(queryOptions);
+  const [activeTab] = await chrome.tabs.query(queryOptions);
   return activeTab;
 };

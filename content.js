@@ -1,7 +1,7 @@
 chrome.runtime.onMessage.addListener(
   (request, sender, response) => {
     if (request.command === "clicked_browser_action") {
-      let url = request.data.url;
+      const url = request.data.url;
       if (url.startsWith("https://www.instagram.com/p/")) {
         msg = {
           command: "open_new_tab",
