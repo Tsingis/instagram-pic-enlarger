@@ -1,14 +1,19 @@
 chrome.runtime.onMessage.addListener(
     (request, sender, response) => {
         if (request.command === "clicked_browser_action") {
-            let url = request.data.toString();
+            let url = request.data.url.toString();
             if (url.startsWith("https://www.instagram.com/p/")) {
                 msg = {
                     command: "open_new_tab",
                     data: getLargePictureUrl(url)
                 };
-                chrome.runtime.sendMessage(msg);
+            } else {
+                msg = {
+                    command: "show_alert",
+                    data: request.data
+                };
             }
+            chrome.runtime.sendMessage(msg);
         }
     }
 );
