@@ -40,9 +40,8 @@ const createAlertBox = (text) => {
 
   const closeBtn = document.createElement("span");
   closeBtn.innerHTML = "&times;";
-  closeBtn.style.marginLeft = "15px";
+  closeBtn.style.marginLeft = "10px";
   closeBtn.style.marginRight = "5px";
-  closeBtn.style.color = "white";
   closeBtn.style.fontWeight = "bold";
   closeBtn.style.cursor = "pointer";
 
