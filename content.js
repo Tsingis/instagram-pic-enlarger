@@ -24,7 +24,7 @@ const getLargePictureUrl = (url) => {
 };
 
 const createAlertBox = (text) => {
-  alertBox = document.createElement("div");
+  const alertBox = document.createElement("div");
   alertBox.id = "enlarger-alert-box";
   alertBox.innerText = text;
   alertBox.style.boxSizing = "border-box";
