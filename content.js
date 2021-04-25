@@ -71,8 +71,8 @@ const hideAlertBox = () => {
   }
 };
 
-const autoHideAlertBox = (durationInSeconds) => {
+const autoHideAlertBox = (delayInSeconds) => {
   setTimeout(() => {
     hideAlertBox();
-  }, durationInSeconds * 1000);
+  }, delayInSeconds * 1000);
 };
