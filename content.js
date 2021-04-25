@@ -48,7 +48,7 @@ const createAlertBox = (text) => {
     closeBtn.style.cursor = "pointer";
 
     closeBtn.onclick = () => {
-        hideAlertBox(alertBox);
+        hideAlertBox();
     };
 
     alertBox.appendChild(closeBtn);
