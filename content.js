@@ -1,7 +1,7 @@
 chrome.runtime.onMessage.addListener(
     (request, sender, response) => {
         if (request.command === "clicked_browser_action") {
-            let url = request.data.url.toString();
+            let url = request.data.url;
             if (url.startsWith("https://www.instagram.com/p/")) {
                 msg = {
                     command: "open_new_tab",
@@ -24,12 +24,6 @@ const getLargePictureUrl = (url) => {
 };
 
 const createAlertBox = (text) => {
-    let alertBox = document.getElementById("enlarger-alert-box")
-    if (alertBox != null) {
-        alertBox.style.display = "initial";
-        return;
-    }
-
     alertBox = document.createElement("div");
     alertBox.id = "enlarger-alert-box";
     alertBox.innerText = text;
@@ -54,25 +48,31 @@ const createAlertBox = (text) => {
     closeBtn.style.cursor = "pointer";
 
     closeBtn.onclick = () => {
-        hideAlertBox(alertBox)
+        hideAlertBox(alertBox);
     };
 
     alertBox.appendChild(closeBtn);
-    return alertBox;
-};
-
-const showAlertBox = (text) => {
-    const alertBox = createAlertBox(text);
     document.body.appendChild(alertBox);
 };
 
-const hideAlertBox = (alertBox) => {
-    alertBox.style.display = "none";
+const showAlertBox = (text) => {
+    const alertBox = document.getElementById("enlarger-alert-box");
+    if (alertBox != null) {
+        alertBox.style.display = "initial";
+        return;
+    }
+    createAlertBox(text);
+};
+
+const hideAlertBox = () => {
+    const alertBox = document.getElementById("enlarger-alert-box");
+    if (alertBox != null) {
+        alertBox.style.display = "none";
+    }
 };
 
 const autoHideAlertBox = (durationInSeconds) => {
-    setInterval(() => {
-        const alertBox = document.getElementById("enlarger-alert-box");
-        hideAlertBox(alertBox);
+    setTimeout(() => {
+        hideAlertBox();
     }, durationInSeconds * 1000);
 };
