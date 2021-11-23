@@ -54,7 +54,7 @@ const createAlertBox = (text) => {
 };
 
 const showAlertBox = (text) => {
-  const alertBox = document.getElementById("enlarger-alert-box");
+  const alertBox = document.querySelector("#enlarger-alert-box");
   if (alertBox !== null) {
     alertBox.style.display = "initial";
     return;
@@ -63,7 +63,7 @@ const showAlertBox = (text) => {
 };
 
 const hideAlertBox = () => {
-  const alertBox = document.getElementById("enlarger-alert-box");
+  const alertBox = document.querySelector("#enlarger-alert-box");
   if (alertBox !== null) {
     alertBox.style.display = "none";
   }
