@@ -39,7 +39,7 @@ const createAlertBox = (text) => {
   alertBox.style.backgroundColor = "#ff9800";
 
   const closeBtn = document.createElement("span");
-  closeBtn.innerHTML = "&times;";
+  closeBtn.innerText = "×";
   closeBtn.style.marginLeft = "10px";
   closeBtn.style.marginRight = "5px";
   closeBtn.style.fontWeight = "bold";
