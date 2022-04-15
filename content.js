@@ -1,9 +1,9 @@
 chrome.runtime.onMessage.addListener(
-  (request, sender, response) => {
-    if (request.command === "clicked_browser_action") {
-      const url = request.data.url;
+  (message, sender, response) => {
+    if (message.command === "clicked_browser_action") {
+      const url = message.data.url;
       if (url.startsWith("https://www.instagram.com/p/")) {
-        msg = {
+        const msg = {
           command: "open_new_tab",
           data: getLargePictureUrl(url)
         };
