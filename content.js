@@ -13,6 +13,7 @@ chrome.runtime.onMessage.addListener(
         autoHideAlertBox(2);
       }
     }
+    response();
   }
 );
 
