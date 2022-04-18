@@ -1,6 +1,3 @@
-chrome.action.onClicked.addListener(handleClick);
-chrome.runtime.onMessage.addListener(handleMessage);
-
 async function handleClick() {
   const activeTab = await getActiveTab();
   const msg = {
@@ -24,3 +21,6 @@ function handleMessage (message, sender, response) {
     chrome.tabs.create({ url: message.data });
   }
 };
+
+chrome.action.onClicked.addListener(handleClick);
+chrome.runtime.onMessage.addListener(handleMessage);

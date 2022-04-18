@@ -3,8 +3,6 @@ const ALERTBOX_TEXT = "This is not an Instagram post!";
 const ALERTBOX_AUTOCLOSE_DELAY = 2000;
 const INSTAGRAM_BASE_URL = "https://www.instagram.com/p/";
 
-chrome.runtime.onMessage.addListener(handleMessage);
-
 function handleMessage(message, sender, response) {
     if (message.command === "clicked_browser_action") {
       const url = message.data.url;
@@ -15,7 +13,7 @@ function handleMessage(message, sender, response) {
         };
         chrome.runtime.sendMessage(msg);
       } else {
-        showAlertBox();
+        showAlertBox(ALERTBOX_AUTOCLOSE_DELAY);
       }
     }
     response();
@@ -31,15 +29,19 @@ function getLargePictureUrl(url) {
 function getAlertBox() {
   let alertBox = document.getElementById(ALERTBOX_ID);
   if (alertBox == null) {
-    alertBox = createAlertBox(ALERTBOX_ID, ALERTBOX_TEXT, ALERTBOX_AUTOCLOSE_DELAY);
+    alertBox = createAlertBox(ALERTBOX_ID, ALERTBOX_TEXT);
   }
   return alertBox;
 }
 
-function showAlertBox() {
+function showAlertBox(autocloseDelay = 1000) {
   const alertBox = getAlertBox();
   if (alertBox != null) {
     alertBox.style.display = "initial";
+  }
+
+  if (autocloseDelay > 0) {
+    closeAlertBoxWithDelay(autocloseDelay);
   }
 };
 
@@ -56,7 +58,7 @@ function closeAlertBoxWithDelay(delay) {
   }, delay);
 };
 
-function createAlertBox(id, text, autocloseDelay = 1000) {
+function createAlertBox(id, text) {
   const alertBox = document.createElement("div");
   alertBox.id = id;
   alertBox.innerText = text;
@@ -74,10 +76,6 @@ function createAlertBox(id, text, autocloseDelay = 1000) {
   const closeBtn = createCloseButton(closeAlertBox)
   alertBox.appendChild(closeBtn);
   document.body.appendChild(alertBox);
-
-  if (autocloseDelay > 0) {
-    closeAlertBoxWithDelay(autocloseDelay);
-  }
 };
 
 function createCloseButton(handleClose) {
@@ -90,3 +88,5 @@ function createCloseButton(handleClose) {
   closeBtn.onclick = () => handleClose();
   return closeBtn;
 }
+
+chrome.runtime.onMessage.addListener(handleMessage);
