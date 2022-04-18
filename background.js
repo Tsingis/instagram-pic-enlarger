@@ -1,13 +1,7 @@
-const getActiveTab = async () => {
-  const queryOptions = {
-    active: true,
-    currentWindow: true
-  };
-  const [activeTab] = await chrome.tabs.query(queryOptions);
-  return activeTab;
-};
+chrome.action.onClicked.addListener(handleClick);
+chrome.runtime.onMessage.addListener(handleMessage);
 
-const onClick = async (tab) => {
+async function handleClick() {
   const activeTab = await getActiveTab();
   const msg = {
     command: "clicked_browser_action",
@@ -16,11 +10,17 @@ const onClick = async (tab) => {
   chrome.tabs.sendMessage(activeTab.id, msg);
 };
 
-const onMessage = (message, sender, response) => {
+async function getActiveTab() {
+  const queryOptions = {
+    active: true,
+    currentWindow: true
+  };
+  const [activeTab] = await chrome.tabs.query(queryOptions);
+  return activeTab;
+};
+
+function handleMessage (message, sender, response) {
   if (message.command === "open_new_tab") {
     chrome.tabs.create({ url: message.data });
   }
 };
-
-chrome.action.onClicked.addListener(onClick);
-chrome.runtime.onMessage.addListener(onMessage);
