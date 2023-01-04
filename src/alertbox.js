@@ -1,9 +1,5 @@
-const ALERTBOX_TEXT = "This is not an Instagram post!";
-const ALERTBOX_AUTOCLOSE_DELAY = 2000;
-const INSTAGRAM_BASE_URL = "https://www.instagram.com/p/";
-
 class AlertBox {
-  constructor(text, autocloseDelay = 0)
+  constructor(text, autocloseDelay = 2000)
   {
     this.id = "enlarger-alert-box";
     this.text = text;
@@ -64,30 +60,4 @@ class AlertBox {
   }
 }
 
-let alertBox = new AlertBox(ALERTBOX_TEXT, ALERTBOX_AUTOCLOSE_DELAY);
-
-function handleMessage(message, sender, response) {
-    if (message.command === "clicked_browser_action") {
-      const url = message.data.url;
-      if (url.startsWith(INSTAGRAM_BASE_URL)) {
-        const msg = {
-          command: "open_new_tab",
-          data: getLargePictureUrl(url)
-        };
-        chrome.runtime.sendMessage(msg);
-      } else {
-        alertBox.show();
-      }
-    }
-    response();
-};
-
-function getLargePictureUrl(url) {
-  if (url.match(/\//g).length > 4) {
-    url = url.substr(0, url.lastIndexOf("\/"));
-  }
-  return url + "/media/?size=l";
-};
-
-
-chrome.runtime.onMessage.addListener(handleMessage);
+export default AlertBox;
