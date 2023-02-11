@@ -7,7 +7,7 @@
         "default_icon": "icon.png"
     },
     "background": {
-        "service_worker": "src/background.js"
+        "service_worker": "background.js"
     },
     "content_scripts": [
         {
@@ -15,14 +15,14 @@
                 "<all_urls>"
             ],
             "js": [
-                "src/content.js"
+                "content.js"
             ]
         }
     ],
     "web_accessible_resources": [
         {
             "matches": ["<all_urls>"],
-            "resources": ["src/main.js", "src/alertbox.js"]
+            "resources": ["alertbox.js"]
         }
     ],
     "permissions": [

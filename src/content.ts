@@ -1,14 +1,14 @@
-import AlertBox from "./alertbox.js";
+import AlertBox from "./alertbox";
+import { getLargePictureUrl } from "./utils";
 
 const ALERTBOX_TEXT = "This is not an Instagram post!";
 const INSTAGRAM_BASE_URL = "https://www.instagram.com/p/";
+const AUTOCLOSE_DELAY = 2000;
 
-export function main() {
-  chrome.runtime.onMessage.addListener(handleMessage);
-}
+chrome.runtime.onMessage.addListener(handleMessage);
 
-function handleMessage(message, sender, response) {
-  let alertBox = new AlertBox(ALERTBOX_TEXT);
+function handleMessage(message: any, sender: chrome.runtime.MessageSender, response: any): void {
+  const alertBox = new AlertBox(ALERTBOX_TEXT, AUTOCLOSE_DELAY);
   if (message.command === "clicked_browser_action") {
     const url = message.data.url;
     if (url.startsWith(INSTAGRAM_BASE_URL)) {
@@ -22,11 +22,4 @@ function handleMessage(message, sender, response) {
     }
   }
   response();
-};
-
-function getLargePictureUrl(url) {
-  if (url.match(/\//g).length > 4) {
-    url = url.substr(0, url.lastIndexOf("\/"));
-  }
-  return url + "/media/?size=l";
 };

@@ -1,5 +1,10 @@
 class AlertBox {
-  constructor(text, autocloseDelay = 2000)
+  id: string;
+  text: string;
+  autocloseDelay?: number;
+  element?: HTMLElement;
+
+  constructor(text: string, autocloseDelay?: number)
   {
     this.id = "enlarger-alert-box";
     this.text = text;
@@ -7,26 +12,26 @@ class AlertBox {
     this.element = this.#create();
   }
 
-  show() {
+  show(): void {
     if (this.element == null) return;
     this.element.style.display = "inline";
-    if (this.autocloseDelay > 0) {
+    if (this.autocloseDelay != null && this.autocloseDelay > 0) {
       this.#autoclose();
     }
   }
 
-  close() {
+  close(): void {
     if (this.element == null) return;
     this.element.style.display = "none";
   }
 
-  #autoclose() {
+  #autoclose(): void {
     setTimeout(() => {
       this.close();
     }, this.autocloseDelay);
   }
 
-  #create() {
+  #create(): HTMLElement {
     const alertBoxElem = document.createElement("div");
     alertBoxElem.id = this.id;
     alertBoxElem.innerText = this.text;
@@ -36,7 +41,7 @@ class AlertBox {
     alertBoxElem.style.position = "fixed";
     alertBoxElem.style.top = "1em";
     alertBoxElem.style.right = "1em";
-    alertBoxElem.style.zIndex = 9999999;
+    alertBoxElem.style.zIndex = "9999999";
     alertBoxElem.style.padding = "10px";
     alertBoxElem.style.borderRadius = "5px"
     alertBoxElem.style.color = "white";
@@ -48,7 +53,7 @@ class AlertBox {
     return alertBoxElem;
   };
   
-  #createCloseButton() {
+  #createCloseButton(): HTMLElement {
     const closeBtn = document.createElement("span");
     closeBtn.innerText = "×";
     closeBtn.style.marginLeft = "10px";
