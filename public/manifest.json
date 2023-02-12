@@ -22,7 +22,7 @@
     "web_accessible_resources": [
         {
             "matches": ["<all_urls>"],
-            "resources": ["alertbox.js"]
+            "resources": ["alertbox.js", "utils.js"]
         }
     ],
     "permissions": [
