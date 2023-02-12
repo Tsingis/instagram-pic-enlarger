@@ -10,7 +10,7 @@ module.exports = {
       utils: path.resolve(__dirname, "src", "utils.ts"),
    },
    output: {
-      path: path.join(__dirname, "dist"),
+      path: path.join(__dirname, "release"),
       filename: "[name].js",
    },
    resolve: {
