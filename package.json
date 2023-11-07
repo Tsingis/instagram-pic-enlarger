@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/chrome": "^0.0.248",
+    "@types/chrome": "^0.0.250",
     "copy-webpack-plugin": "^11.0.0",
     "ts-loader": "^9.5.0",
     "typescript": "5.2.2",
