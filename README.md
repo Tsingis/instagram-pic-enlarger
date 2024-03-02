@@ -2,11 +2,12 @@
 
 Opens profile's enlarged picture from the current tab to a new tab
 
-Build:
+Commands:
 
 1. Install dependencies `npm install`
 2. Build extension `npm run build`
 3. Package extension `npm run package`
+4. Run tests `npm run test`
 
 Installation:
 
