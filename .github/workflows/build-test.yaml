@@ -1,4 +1,4 @@
-name: build
+name: build-test
 on:
   push:
     branches:
@@ -6,6 +6,7 @@ on:
   pull_request:
     branches:
       - master
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,3 +23,7 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+      - name: Setup tests
+        run: npm run test-setup
+      - name: Run tests
+        run: npm run test
