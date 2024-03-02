@@ -9,7 +9,7 @@ chrome.runtime.onMessage.addListener(handleMessage);
 
 function handleMessage(message: any, sender: chrome.runtime.MessageSender, response: any): void {
   const alertBox = new AlertBox(ALERTBOX_TEXT, AUTOCLOSE_DELAY);
-  if (message.command === "clicked_browser_action") {
+  if (message.command === "toggle_extension") {
     const url = message.data.url;
     if (url.startsWith(INSTAGRAM_BASE_URL)) {
       const msg = {

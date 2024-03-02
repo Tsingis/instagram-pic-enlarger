@@ -1,10 +1,11 @@
-chrome.action.onClicked.addListener(handleClick);
+chrome.action.onClicked.addListener(handleAction);
+chrome.commands.onCommand.addListener(handleAction);
 chrome.runtime.onMessage.addListener(handleMessage);
 
-async function handleClick(): Promise<void> {
+async function handleAction(): Promise<void> {
   const activeTab = await getActiveTab();
   const msg = {
-    command: "clicked_browser_action",
+    command: "toggle_extension",
     data: activeTab
   };
   if (activeTab.id == null) return;
