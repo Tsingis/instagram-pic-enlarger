@@ -4,13 +4,17 @@
   "description": "Opens profile's enlarged picture from the current tab to a new tab",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "package": "tar -cf %npm_package_name%_%npm_package_version%.zip release"
+    "package": "tar -cf %npm_package_name%_%npm_package_version%.zip release",
+    "test-setup": "playwright install --with-deps chromium",
+    "test": "playwright test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@playwright/test": "^1.42.1",
     "@types/chrome": "^0.0.262",
+    "@types/node": "^20.11.24",
     "copy-webpack-plugin": "^12.0.2",
     "ts-loader": "^9.5.1",
     "typescript": "5.3.3",

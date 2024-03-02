@@ -6,5 +6,6 @@
       "target": "es6",
       "esModuleInterop": true,
       "noEmitOnError": true,
-   }
+   },
+   "exclude": ["node_modules", "tests", "playwright.config.ts"]
 }
