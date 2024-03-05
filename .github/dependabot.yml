@@ -3,7 +3,7 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "monday"
       time: "21:00"
       timezone: "Europe/Helsinki"
@@ -11,7 +11,7 @@ updates:
     directory: "/"
     versioning-strategy: "increase"
     schedule:
-      interval: "monthly"
+      interval: "weekly"
       day: "monday"
       time: "21:00"
       timezone: "Europe/Helsinki"
