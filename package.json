@@ -4,7 +4,6 @@
   "description": "Opens profile's enlarged picture from the current tab to a new tab",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "package": "tar -cf %npm_package_name%_%npm_package_version%.zip release",
     "test-setup": "playwright install --with-deps chromium",
     "test": "playwright test"
   },
