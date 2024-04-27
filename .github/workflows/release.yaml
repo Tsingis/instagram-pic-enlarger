@@ -1,0 +1,33 @@
+name: release
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+jobs:
+  workflow:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    strategy:
+      matrix:
+        node-version: ["20"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Package
+        run: zip -r instagram-pic-enlarger.zip ./release/*
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.0
+          name: Instagram Pic Enlarger
+          files: instagram-pic-enlarger.zip
+          make_latest: true

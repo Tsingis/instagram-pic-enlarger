@@ -1,4 +1,4 @@
-name: build-test-release
+name: test
 on:
   push:
     branches:
@@ -10,8 +10,6 @@ on:
 jobs:
   workflow:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     strategy:
       matrix:
         node-version: ["20"]
@@ -29,12 +27,3 @@ jobs:
         run: npm run test-setup
       - name: Run tests
         run: npm run test
-      - name: Package
-        run: zip -r instagram-pic-enlarger.zip ./release/*
-      - name: Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: v1.0.0
-          name: Instagram Pic Enlarger
-          files: instagram-pic-enlarger.zip
-          make_latest: true
