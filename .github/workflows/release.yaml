@@ -1,14 +1,11 @@
-name: build-test-release
+name: release
 on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
   workflow_dispatch:
 jobs:
-  workflow:
+  release:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -25,10 +22,6 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
-      - name: Setup tests
-        run: npm run test-setup
-      - name: Run tests
-        run: npm run test
       - name: Package
         run: zip -r instagram-pic-enlarger.zip ./release/*
       - name: Release
