@@ -13,7 +13,7 @@
   "devDependencies": {
     "@playwright/test": "^1.44.0",
     "@types/chrome": "^0.0.268",
-    "@types/node": "^20.12.11",
+    "@types/node": "^20.12.12",
     "copy-webpack-plugin": "^12.0.2",
     "ts-loader": "^9.5.1",
     "typescript": "5.4.5",
