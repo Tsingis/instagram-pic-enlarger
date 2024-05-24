@@ -3,6 +3,13 @@ on:
   push:
     branches:
       - master
+    paths:
+      - "**"
+      - "!tests/**"
+      - "!README.md"
+      - "!.gitignore"
+      - "!.github/**"
+      - ".github/workflows/release.yaml"
   workflow_dispatch:
 jobs:
   release:
