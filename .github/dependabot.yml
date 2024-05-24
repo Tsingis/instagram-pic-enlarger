@@ -4,7 +4,7 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
-      day: "monday"
+      day: "sunday"
       time: "21:00"
       timezone: "Europe/Helsinki"
   - package-ecosystem: "npm"
@@ -12,6 +12,6 @@ updates:
     versioning-strategy: "increase"
     schedule:
       interval: "weekly"
-      day: "monday"
+      day: "sunday"
       time: "21:00"
       timezone: "Europe/Helsinki"
