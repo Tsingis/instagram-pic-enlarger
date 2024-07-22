@@ -4,11 +4,11 @@ on:
     branches:
       - master
     paths:
-      - "**"
-      - "!tests/**"
-      - "!README.md"
-      - "!.gitignore"
-      - "!.github/**"
+      - "src/**"
+      - "public/**"
+      - "tsconfig.json"
+      - "webpack.config.js"
+      - "package*.json"
       - ".github/workflows/release.yaml"
   workflow_dispatch:
 jobs:

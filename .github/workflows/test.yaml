@@ -1,22 +1,15 @@
 name: test
 on:
-  push:
-    branches:
-      - master
-    paths:
-      - "**"
-      - "!README.md"
-      - "!.gitignore"
-      - "!.github/**"
-      - ".github/workflows/test.yaml"
   pull_request:
     branches:
       - master
     paths:
-      - "**"
-      - "!README.md"
-      - "!.gitignore"
-      - "!.github/**"
+      - "src/**"
+      - "tests/**"
+      - "public/**"
+      - "tsconfig.json"
+      - "webpack.config.js"
+      - "package*.json"
       - ".github/workflows/test.yaml"
   workflow_dispatch:
 jobs:

@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Opens profile's enlarged picture from the current tab to a new tab",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "test-setup": "playwright install --with-deps chromium",
-    "test": "playwright test"
+    "build": "webpack --config ./webpack.config.js",
+    "test-setup": "npx playwright install --with-deps chromium",
+    "test": "npx playwright test --config=tests/playwright.config.ts"
   },
   "keywords": [],
   "author": "",
