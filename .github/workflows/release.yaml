@@ -34,7 +34,8 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v1.0.0
           name: Instagram Pic Enlarger
+          body: Download latest version
+          tag_name: v1.0.0
           files: instagram-pic-enlarger.zip
           make_latest: true
