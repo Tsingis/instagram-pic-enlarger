@@ -9,7 +9,7 @@ on:
       - "tsconfig.json"
       - "webpack.config.js"
       - "package*.json"
-      - ".github/workflows/release.yaml"
+      - ".github/workflows/release.yml"
   workflow_dispatch:
 env:
   TAG: v1.0.0

@@ -10,7 +10,7 @@ on:
       - "tsconfig.json"
       - "webpack.config.js"
       - "package*.json"
-      - ".github/workflows/test.yaml"
+      - ".github/workflows/test.yml"
   workflow_dispatch:
 jobs:
   test:
