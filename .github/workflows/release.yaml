@@ -11,6 +11,11 @@ on:
       - "package*.json"
       - ".github/workflows/release.yaml"
   workflow_dispatch:
+env:
+  TAG: v1.0.0
+  FILE: instagram-pic-enlarger.zip
+  TITLE: Instagram Pic Enlarger
+  NOTES: Download latest version
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -30,18 +35,11 @@ jobs:
       - name: Build
         run: npm run build
       - name: Package
-        run: zip -r instagram-pic-enlarger.zip ./release/*
-      - name: Remove
-        run: gh release delete v1.0.0 --yes --cleanup-tag
+        run: zip -r $FILE ./release/*
+      - name: Release
+        run: |
+          gh release delete "$TAG" --yes --cleanup-tag
+          gh release create "$TAG" --latest --title "$TITLE" --notes "$NOTES"
+          gh release upload "$TAG" "$FILE" --clobber
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Release
-        uses: softprops/action-gh-release@v2
-        with:
-          name: Instagram Pic Enlarger
-          body: Download latest version
-          tag_name: v1.0.0
-          files: instagram-pic-enlarger.zip
-          draft: false
-          prerelease: false
-          make_latest: true
