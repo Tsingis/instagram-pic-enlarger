@@ -31,6 +31,10 @@ jobs:
         run: npm run build
       - name: Package
         run: zip -r instagram-pic-enlarger.zip ./release/*
+      - name: Remove
+        run: gh release delete v1.0.0 --yes --cleanup-tag
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
@@ -38,4 +42,6 @@ jobs:
           body: Download latest version
           tag_name: v1.0.0
           files: instagram-pic-enlarger.zip
+          draft: false
+          prerelease: false
           make_latest: true
