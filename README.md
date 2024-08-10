@@ -1,3 +1,5 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Tsingis_instagram-pic-enlarger&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Tsingis_instagram-pic-enlarger) [![Release Status](https://github.com/tsingis/instagram-pic-enlarger/actions/workflows/release.yml/badge.svg)](https://github.com/tsingis/instagram-pic-enlarger/actions/workflows/release.yml)
+
 ## Chrome extension to enlarge instagram picture
 
 Opens profile's enlarged picture from the current tab to a new tab
