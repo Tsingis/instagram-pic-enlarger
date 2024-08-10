@@ -1,12 +1,12 @@
-import { test as base, chromium, type BrowserContext } from "@playwright/test";
-import path from "path";
+import { test as base, chromium, type BrowserContext } from "@playwright/test"
+import path from "path"
 
 export const test = base.extend<{
-  context: BrowserContext;
-  extensionId: string;
+  context: BrowserContext
+  extensionId: string
 }>({
-  context: async ({ }, use) => {
-    const pathToExtension = path.join(__dirname, "..", "release");
+  context: async (_, use) => {
+    const pathToExtension = path.join(__dirname, "..", "release")
     const context = await chromium.launchPersistentContext("", {
       headless: false,
       args: [
@@ -14,18 +14,18 @@ export const test = base.extend<{
         `--disable-extensions-except=${pathToExtension}`,
         `--load-extension=${pathToExtension}`,
       ],
-    });
-    await use(context);
-    await context.close();
+    })
+    await use(context)
+    await context.close()
   },
   extensionId: async ({ context }, use) => {
-    let [background] = context.serviceWorkers();
+    let [background] = context.serviceWorkers()
     if (!background) {
-      background = await context.waitForEvent("serviceworker");
+      background = await context.waitForEvent("serviceworker")
     }
 
-    const extensionId = background.url().split("/")[2];
-    await use(extensionId);
+    const extensionId = background.url().split("/")[2]
+    await use(extensionId)
   },
-});
-export const expect = test.expect;
+})
+export const expect = test.expect

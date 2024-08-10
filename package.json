@@ -5,7 +5,9 @@
   "scripts": {
     "build": "webpack --config ./webpack.config.js",
     "test-setup": "npx playwright install --with-deps chromium",
-    "test": "npx playwright test --config=tests/playwright.config.ts"
+    "test": "npx playwright test --config=tests/playwright.config.ts",
+    "prettier": "npx prettier --check '**/*.{js,jsx,ts,tsx,css,html}'",
+    "prettier:fix": "npx prettier --write '**/*.{js,jsx,ts,tsx,css,html}'"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +17,7 @@
     "@types/chrome": "^0.0.269",
     "@types/node": "^22.2.0",
     "copy-webpack-plugin": "^12.0.2",
+    "prettier": "^3.3.3",
     "ts-loader": "^9.5.1",
     "typescript": "5.5.4",
     "webpack": "^5.93.0",
