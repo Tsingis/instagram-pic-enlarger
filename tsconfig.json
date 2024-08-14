@@ -4,8 +4,9 @@
       "strict": true,
       "module": "es6",
       "target": "es6",
+      "moduleResolution": "node",
       "esModuleInterop": true,
       "noEmitOnError": true,
    },
-   "exclude": ["node_modules", "tests"]
+   "exclude": ["node_modules"]
 }

@@ -5,7 +5,7 @@ export const test = base.extend<{
   context: BrowserContext
   extensionId: string
 }>({
-  context: async (_, use) => {
+  context: async ({}, use: any) => {
     const pathToExtension = path.join(__dirname, "..", "release")
     const context = await chromium.launchPersistentContext("", {
       headless: false,
@@ -18,7 +18,7 @@ export const test = base.extend<{
     await use(context)
     await context.close()
   },
-  extensionId: async ({ context }, use) => {
+  extensionId: async ({ context }: any, use: any) => {
     let [background] = context.serviceWorkers()
     if (!background) {
       background = await context.waitForEvent("serviceworker")
