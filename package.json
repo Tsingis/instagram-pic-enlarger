@@ -15,7 +15,7 @@
   "devDependencies": {
     "@playwright/test": "^1.49.0",
     "@types/chrome": "^0.0.283",
-    "@types/node": "^22.9.1",
+    "@types/node": "^22.9.3",
     "copy-webpack-plugin": "^12.0.2",
     "prettier": "^3.3.3",
     "ts-loader": "^9.5.1",
