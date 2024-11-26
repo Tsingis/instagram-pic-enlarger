@@ -11,6 +11,9 @@ on:
       - "package*.json"
       - ".github/workflows/release.yml"
   workflow_dispatch:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 env:
   TAG: v1.0.0
   FILE: instagram-pic-enlarger.zip
