@@ -1,5 +1,16 @@
 name: codeql
 on:
+  push:
+    branches:
+      - master
+    paths:
+      - "src/**"
+      - "tests/**"
+      - "public/**"
+      - "tsconfig.json"
+      - "webpack.config.js"
+      - "package*.json"
+      - ".github/workflows/codeql.yml"
   schedule:
     - cron: "0 21 * * 0"
   workflow_dispatch:
