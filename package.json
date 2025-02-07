@@ -14,7 +14,7 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.50.1",
-    "@types/chrome": "^0.0.300",
+    "@types/chrome": "^0.0.302",
     "@types/node": "^22.12.0",
     "copy-webpack-plugin": "^12.0.2",
     "prettier": "^3.4.2",
