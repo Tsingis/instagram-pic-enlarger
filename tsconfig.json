@@ -2,11 +2,12 @@
    "compilerOptions": {
       "baseUrl": "src",
       "strict": true,
-      "module": "es6",
-      "target": "es6",
+      "module": "ESNext",
+      "target": "ESNext",
       "moduleResolution": "node",
       "esModuleInterop": true,
       "noEmitOnError": true,
+      "skipLibCheck": true     
    },
    "exclude": ["node_modules"]
 }
