@@ -7,7 +7,7 @@ updates:
       day: "wednesday"
       time: "21:00"
       timezone: "Europe/Helsinki"
-  - package-ecosystem: "npm"
+  - package-ecosystem: "yarn"
     directory: "/"
     versioning-strategy: "increase"
     schedule:
