@@ -54,10 +54,10 @@
   dependencies:
     playwright "1.52.0"
 
-"@types/chrome@^0.0.316":
-  version "0.0.316"
-  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.316.tgz#121ca078f71a054f4380b7c6c8f389d97f13cfe4"
-  integrity sha512-zoXIly8A41t8U5oC/14hgwjJ3k6kOE6ODJcCSGYda9AFOSloySO6OSO+RHayndb4BaJWg9s5FrXhYkemgsSEkA==
+"@types/chrome@^0.0.323":
+  version "0.0.323"
+  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.323.tgz#8e6d3ffaca47a9c8ce6f60d25634d26aba3c4cfb"
+  integrity sha512-ipiDwx41lmGeLnbiT6ENOayvWXdkqKqNwqDQWEuz6dujaX7slSkk1nbSt5Q5c6xnQ708+kuCFrC00VLltSbWVA==
   dependencies:
     "@types/filesystem" "*"
     "@types/har-format" "*"
