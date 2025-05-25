@@ -9,7 +9,8 @@ on:
       - "public/**"
       - "tsconfig.json"
       - "webpack.config.js"
-      - "package*.json"
+      - "package.json"
+      - "yarn.lock"
       - ".github/workflows/codeql.yml"
   schedule:
     - cron: "0 21 * * 0"

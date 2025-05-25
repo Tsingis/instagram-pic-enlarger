@@ -4,10 +4,10 @@
   "description": "Opens profile's enlarged picture from the current tab to a new tab",
   "scripts": {
     "build": "webpack --config ./webpack.config.js",
-    "test:setup": "npx playwright install --with-deps chromium",
-    "test": "npx playwright test --config=tests/playwright.config.ts",
-    "prettier": "npx prettier --check '**/*.{js,jsx,ts,tsx,css,html}'",
-    "prettier:fix": "npx prettier --write '**/*.{js,jsx,ts,tsx,css,html}'"
+    "test:setup": "yarn playwright install --with-deps chromium",
+    "test": "yarn playwright test --config=tests/playwright.config.ts",
+    "prettier": "prettier --check '**/*.{js,jsx,ts,tsx,css,html}'",
+    "prettier:fix": "prettier --write '**/*.{js,jsx,ts,tsx,css,html}'"
   },
   "keywords": [],
   "author": "",
