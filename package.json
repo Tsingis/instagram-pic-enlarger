@@ -13,7 +13,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.53.2",
+    "@playwright/test": "^1.54.1",
     "@types/chrome": "^0.1.0",
     "@types/node": "^24.0.12",
     "copy-webpack-plugin": "^13.0.0",
