@@ -11,7 +11,7 @@ on:
       - "webpack.config.js"
       - "package.json"
       - "yarn.lock"
-      - ".github/workflows/codeql.yml"
+      - ".github/workflows/**/*.yml"
   schedule:
     - cron: "0 21 * * 0"
   workflow_dispatch:
