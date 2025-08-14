@@ -20,6 +20,14 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v5
+      - name: Setup corepack
+        run: corepack enable
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "yarn"
+          cache-dependency-path: yarn.lock
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
