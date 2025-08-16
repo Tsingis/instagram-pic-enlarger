@@ -33,7 +33,7 @@ class AlertBox {
   #create(): HTMLElement {
     const alertBoxElem = document.createElement("div")
     alertBoxElem.id = this.id
-    alertBoxElem.innerText = this.text
+    alertBoxElem.textContent = this.text
     alertBoxElem.style.display = "none"
     alertBoxElem.style.boxSizing = "border-box"
     alertBoxElem.style.font = "25px Verdana, sans-serif"
