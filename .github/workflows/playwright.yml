@@ -1,20 +1,20 @@
-name: test
+name: playwright
 on:
   pull_request:
     branches:
       - master
     paths:
       - "src/**"
-      - "tests/**"
+      - "playwright/**"
       - "public/**"
       - "tsconfig.json"
       - "webpack.config.js"
       - "package.json"
       - "yarn.lock"
-      - ".github/workflows/test.yml"
+      - ".github/workflows/playwright.yml"
   workflow_dispatch:
 jobs:
-  test:
+  playwright:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -22,12 +22,6 @@ jobs:
       - uses: actions/checkout@v5
       - name: Setup corepack
         run: corepack enable
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: "yarn"
-          cache-dependency-path: yarn.lock
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -39,6 +33,6 @@ jobs:
       - name: Build
         run: yarn build
       - name: Setup tests
-        run: yarn test:setup
+        run: yarn playwright:setup
       - name: Run tests
-        run: yarn test
+        run: yarn playwright:test

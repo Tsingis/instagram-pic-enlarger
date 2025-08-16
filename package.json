@@ -5,8 +5,8 @@
   "packageManager": "yarn@4.9.2",
   "scripts": {
     "build": "webpack --config ./webpack.config.js",
-    "test:setup": "yarn playwright install --with-deps chromium",
-    "test": "yarn playwright test --config=tests/playwright.config.ts",
+    "playwright:setup": "yarn playwright install --with-deps chromium",
+    "playwright:test": "yarn playwright test --config=playwright/playwright.config.ts",
     "prettier": "prettier --check '**/*.{js,jsx,ts,tsx,css,html}'",
     "prettier:fix": "prettier --write '**/*.{js,jsx,ts,tsx,css,html}'"
   },
