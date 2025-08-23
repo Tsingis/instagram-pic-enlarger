@@ -16,3 +16,13 @@ Instructions:
 
 1. Open Instagram post (image or video)
 2. Click extension icon in the toolbar &#8594; new tab opens with larger image
+
+Tools:
+
+- Node.js
+
+Setup:
+
+- Setup corepack `corepack enable`
+- Run `yarn install`
+- Build `yarn build`
