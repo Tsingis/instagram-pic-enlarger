@@ -2,7 +2,7 @@
   "name": "instagram-pic-enlarger",
   "version": "1.0.0",
   "description": "Opens profile's enlarged picture from the current tab to a new tab",
-  "packageManager": "yarn@4.9.2",
+  "packageManager": "yarn@4.9.4",
   "scripts": {
     "build": "webpack --config ./webpack.config.js",
     "playwright:setup": "yarn playwright install --with-deps chromium",
