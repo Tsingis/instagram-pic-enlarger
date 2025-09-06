@@ -2,7 +2,7 @@ name: playwright
 on:
   pull_request:
     branches:
-      - master
+      - main
     paths:
       - "src/**"
       - "playwright/**"
