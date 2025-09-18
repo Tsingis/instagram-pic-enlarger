@@ -11,6 +11,7 @@
     "prettier": "prettier --check '**/*.{js,jsx,ts,tsx,css,html}'",
     "prettier:fix": "prettier --write '**/*.{js,jsx,ts,tsx,css,html}'"
   },
+  "npmMinimumReleaseAge": 60,
   "devDependencies": {
     "@playwright/test": "^1.55.0",
     "@types/chrome": "^0.1.9",
