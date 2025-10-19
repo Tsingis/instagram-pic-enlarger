@@ -13,7 +13,7 @@
   },
   "npmMinimumReleaseAge": 60,
   "devDependencies": {
-    "@playwright/test": "^1.56.0",
+    "@playwright/test": "^1.56.1",
     "@types/chrome": "^0.1.24",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.8.1",
