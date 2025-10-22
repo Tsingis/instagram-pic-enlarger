@@ -1,11 +1,9 @@
 class AlertBox {
-  id: string
   text: string
   autocloseDelay?: number
   element?: HTMLElement
 
   constructor(text: string, autocloseDelay?: number) {
-    this.id = "enlarger-alert-box"
     this.text = text
     this.autocloseDelay = autocloseDelay
     this.element = this.#create()
@@ -32,7 +30,7 @@ class AlertBox {
 
   #create(): HTMLElement {
     const alertBoxElem = document.createElement("div")
-    alertBoxElem.id = this.id
+    alertBoxElem.id = "enlarger-alert-box"
     alertBoxElem.textContent = this.text
     alertBoxElem.style.display = "none"
     alertBoxElem.style.boxSizing = "border-box"
