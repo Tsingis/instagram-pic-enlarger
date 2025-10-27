@@ -2,6 +2,10 @@
   "name": "instagram-pic-enlarger",
   "version": "1.0.0",
   "description": "Opens profile's enlarged picture from the current tab to a new tab",
+  "engineStrict": false,
+  "engines": {
+    "node": ">=22"
+  },
   "packageManager": "yarn@4.10.3",
   "scripts": {
     "build": "webpack --config ./webpack.config.js",
