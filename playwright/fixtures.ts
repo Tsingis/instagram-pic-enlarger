@@ -5,6 +5,7 @@ export const test = base.extend<{
   context: BrowserContext
   extensionId: string
 }>({
+  /* eslint-disable no-empty-pattern */
   context: async ({}, use: any) => {
     const pathToExtension = path.join(__dirname, "..", "release")
     const context = await chromium.launchPersistentContext("", {

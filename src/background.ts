@@ -9,16 +9,12 @@ async function handleAction(): Promise<void> {
     data: activeTab,
   }
   if (activeTab.id == null) return
-  chrome.tabs.sendMessage(activeTab.id, msg)
+  await chrome.tabs.sendMessage(activeTab.id, msg)
 }
 
-function handleMessage(
-  message: any,
-  sender: chrome.runtime.MessageSender,
-  response: any
-): void {
+async function handleMessage(message: any): Promise<void> {
   if (message.command === "open_new_tab") {
-    chrome.tabs.create({ url: message.data })
+    await chrome.tabs.create({ url: message.data })
   }
 }
 

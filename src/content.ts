@@ -7,11 +7,11 @@ const AUTOCLOSE_DELAY = 2000
 
 chrome.runtime.onMessage.addListener(handleMessage)
 
-function handleMessage(
+async function handleMessage(
   message: any,
-  sender: chrome.runtime.MessageSender,
+  _: any,
   response: any
-): void {
+): Promise<void> {
   const alertBox = new AlertBox(ALERTBOX_TEXT, AUTOCLOSE_DELAY)
   if (message.command === "toggle_extension") {
     const url = message.data.url
@@ -20,7 +20,7 @@ function handleMessage(
         command: "open_new_tab",
         data: getLargePictureUrl(url),
       }
-      chrome.runtime.sendMessage(msg)
+      await chrome.runtime.sendMessage(msg)
     } else {
       alertBox.show()
     }

@@ -28,5 +28,9 @@ jobs:
           cache-dependency-path: yarn.lock
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      - name: Check formatting & linting
+        run: |
+          yarn prettier
+          yarn lint
       - name: Run tests
         run: yarn test

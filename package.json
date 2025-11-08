@@ -13,7 +13,8 @@
     "playwright:test": "yarn playwright test --config=playwright/playwright.config.ts",
     "test": "yarn jest --config=tests/jest.config.ts",
     "prettier": "prettier --check '**/*.{js,jsx,ts,tsx,css,html}'",
-    "prettier:fix": "prettier --write '**/*.{js,jsx,ts,tsx,css,html}'"
+    "prettier:fix": "prettier --write '**/*.{js,jsx,ts,tsx,css,html}'",
+    "lint": "yarn oxlint --type-aware"
   },
   "npmMinimumReleaseAge": 60,
   "devDependencies": {
@@ -24,6 +25,8 @@
     "copy-webpack-plugin": "^13.0.1",
     "jest": "^30.2.0",
     "jest-environment-jsdom": "^30.2.0",
+    "oxlint": "^1.26.0",
+    "oxlint-tsgolint": "^0.5.1",
     "prettier": "^3.6.2",
     "ts-jest": "^29.4.5",
     "ts-loader": "^9.5.4",
