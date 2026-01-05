@@ -10,8 +10,8 @@
   "scripts": {
     "build": "webpack --config ./webpack.config.js",
     "playwright:setup": "yarn playwright install --with-deps chromium",
-    "playwright:test": "yarn playwright test --config=playwright/playwright.config.ts",
-    "test": "yarn jest --config=tests/jest.config.ts",
+    "playwright:test": "yarn playwright test --config=tests/playwright/playwright.config.ts",
+    "test": "yarn jest --config=tests/jest/jest.config.ts",
     "prettier": "prettier --check '**/*.{js,jsx,ts,tsx,css,html}'",
     "prettier:fix": "prettier --write '**/*.{js,jsx,ts,tsx,css,html}'",
     "lint": "yarn oxlint --type-aware"

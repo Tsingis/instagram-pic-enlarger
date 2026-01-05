@@ -1,12 +1,23 @@
 name: codeql
 on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "src/**"
+      - "tests/**"
+      - "public/**"
+      - "tsconfig.json"
+      - "webpack.config.js"
+      - "package.json"
+      - "yarn.lock"
+      - ".github/workflows/**/*.yml"
   push:
     branches:
       - main
     paths:
       - "src/**"
       - "tests/**"
-      - "playwright/**"
       - "public/**"
       - "tsconfig.json"
       - "webpack.config.js"

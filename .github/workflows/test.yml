@@ -5,7 +5,7 @@ on:
       - main
     paths:
       - "src/**"
-      - "tests/**"
+      - "tests/jest/**"
       - "tsconfig.json"
       - "package.json"
       - "yarn.lock"
