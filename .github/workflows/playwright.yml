@@ -5,7 +5,7 @@ on:
       - main
     paths:
       - "src/**"
-      - "playwright/**"
+      - "tests/playwright/**"
       - "public/**"
       - "tsconfig.json"
       - "webpack.config.js"

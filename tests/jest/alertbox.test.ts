@@ -1,4 +1,4 @@
-import AlertBox from "../src/alertbox"
+import AlertBox from "../../src/alertbox"
 
 describe("AlertBox", () => {
   beforeEach(() => {
