@@ -19,7 +19,7 @@
   "npmMinimumReleaseAge": 60,
   "devDependencies": {
     "@playwright/test": "^1.57.0",
-    "@types/chrome": "^0.1.33",
+    "@types/chrome": "^0.1.35",
     "@types/jest": "^30.0.0",
     "@types/node": "^25.0.8",
     "copy-webpack-plugin": "^13.0.1",
