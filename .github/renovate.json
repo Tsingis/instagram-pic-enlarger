@@ -9,21 +9,17 @@
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": ["* 21-22 * * 4"],
-    "rangeStrategy": "bump",
-    "commitMessageAction": "Update yarn lockfile",
-    "commitMessageTopic": "",
-    "commitMessageExtra": "",
-    "commitMessagePrefix": null,
-    "commitMessageSuffix": null
+    "commitMessageAction": "Update yarn lockfile"
   },
   "packageRules": [
     {
-      "matchDepTypes": ["packageManager"],
-      "enabled": true
-    },
-    {
       "matchDepTypes": ["dependencies", "devDependencies"],
       "enabled": false
+    },
+    {
+      "matchDepTypes": ["packageManager"],
+      "matchPackageNames": ["yarn"],
+      "enabled": true
     }
   ]
 }
