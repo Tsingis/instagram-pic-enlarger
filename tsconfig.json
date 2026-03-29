@@ -1,9 +1,9 @@
 {
    "compilerOptions": {
       "strict": true,
-      "module": "ESNext",
       "target": "ESNext",
-      "moduleResolution": "node",
+      "module": "nodenext",
+      "moduleResolution": "nodenext",
       "esModuleInterop": true,
       "noEmitOnError": true,
       "skipLibCheck": true,
