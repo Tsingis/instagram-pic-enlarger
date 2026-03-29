@@ -36,6 +36,7 @@
   },
   "resolutions": {
     "minimatch": "^9.0.7",
+    "picomatch": "^4.0.4",
     "serialize-javascript": "^7.0.3"
   }
 }
