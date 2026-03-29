@@ -6,7 +6,8 @@
       "moduleResolution": "node",
       "esModuleInterop": true,
       "noEmitOnError": true,
-      "skipLibCheck": true     
+      "skipLibCheck": true,
+      "types": ["node", "chrome", "jest"]
    },
    "exclude": ["node_modules"]
 }
