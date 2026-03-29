@@ -14,6 +14,7 @@
     "test": "yarn jest --config=tests/jest/jest.config.ts",
     "prettier": "prettier --check '**/*.{js,jsx,ts,tsx,css,html}'",
     "prettier:fix": "prettier --write '**/*.{js,jsx,ts,tsx,css,html}'",
+    "typecheck": "tsc --noEmit",
     "lint": "yarn oxlint --type-aware"
   },
   "npmMinimumReleaseAge": 60,

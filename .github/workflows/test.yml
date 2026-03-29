@@ -32,5 +32,6 @@ jobs:
         run: |
           yarn prettier
           yarn lint
+          yarn typecheck
       - name: Run tests
         run: yarn test
