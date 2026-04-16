@@ -22,7 +22,7 @@
     "@playwright/test": "^1.59.1",
     "@types/chrome": "^0.1.40",
     "@types/jest": "^30.0.0",
-    "@types/node": "^25.5.2",
+    "@types/node": "^25.6.0",
     "copy-webpack-plugin": "^14.0.0",
     "jest": "^30.3.0",
     "jest-environment-jsdom": "^30.3.0",
