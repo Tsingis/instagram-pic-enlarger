@@ -1,10 +1,6 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": [
-    "import",
-    "jest",
-    "node"
-  ],
+  "plugins": ["import", "jest", "node"],
   "categories": {},
   "rules": {
     "for-direction": "warn",

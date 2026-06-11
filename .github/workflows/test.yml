@@ -28,9 +28,9 @@ jobs:
           cache-dependency-path: yarn.lock
       - name: Install dependencies
         run: yarn install --immutable
-      - name: Check formatting & linting
+      - name: Check formatting, linting and typecheck
         run: |
-          yarn prettier
+          yarn format
           yarn lint
           yarn typecheck
       - name: Run tests
