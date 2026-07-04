@@ -30,9 +30,7 @@
     "webpack-cli": "^7.1.0"
   },
   "resolutions": {
-    "minimatch": "^9.0.7",
-    "picomatch": "^4.0.4",
-    "serialize-javascript": "^7.0.5"
+    "glob": "^13.0.6"
   },
   "engines": {
     "node": ">=22"
