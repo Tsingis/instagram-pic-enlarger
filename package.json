@@ -21,7 +21,7 @@
     "jest": "^30.4.2",
     "jest-environment-jsdom": "^30.4.1",
     "oxfmt": "^0.63.0",
-    "oxlint": "^1.78.0",
+    "oxlint": "^1.79.0",
     "oxlint-tsgolint": "^7.0.2001",
     "ts-jest": "^29.4.12",
     "ts-loader": "^9.6.2",
