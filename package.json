@@ -13,7 +13,7 @@
     "lint": "oxlint --type-aware"
   },
   "devDependencies": {
-    "@playwright/test": "^1.62.1",
+    "@playwright/test": "^1.63.0",
     "@types/chrome": "^0.2.7",
     "@types/jest": "^30.0.0",
     "@types/node": "^26.3.0",
