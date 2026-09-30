@@ -1544,13 +1544,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/chrome@npm:^0.3.0":
-  version: 0.3.0
-  resolution: "@types/chrome@npm:0.3.0"
+"@types/chrome@npm:^0.3.4":
+  version: 0.3.4
+  resolution: "@types/chrome@npm:0.3.4"
   dependencies:
     "@types/filesystem": "npm:*"
     "@types/har-format": "npm:*"
-  checksum: 10c0/b7b9a8e692cdbb10bb1334637e6d8ad2b02be8aeea749bc5218169379430ae93fe18cfead81a7af716a0270c258dcb8c5813690085b1f8255cdf54b8467817f2
+  checksum: 10c0/089d7fe43a6fcbed9c844a3599e5ab5ed1d8c2a492cb11f7f7c94e2fbdb8f0df5f56db5ef0b6aead0cf4fb8dbc727287ec9c56b8128e81458f5b5cea7bb540a0
   languageName: node
   linkType: hard
 
@@ -2988,7 +2988,7 @@ __metadata:
   resolution: "instagram-pic-enlarger@workspace:."
   dependencies:
     "@playwright/test": "npm:^1.63.0"
-    "@types/chrome": "npm:^0.3.0"
+    "@types/chrome": "npm:^0.3.4"
     "@types/jest": "npm:^30.0.0"
     "@types/node": "npm:^26.3.0"
     copy-webpack-plugin: "npm:^14.0.0"
