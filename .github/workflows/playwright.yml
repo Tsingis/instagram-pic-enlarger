@@ -8,7 +8,7 @@ on:
       - "tests/playwright/**"
       - "public/**"
       - "tsconfig.json"
-      - "webpack.config.js"
+      - "build.mjs"
       - "package.json"
       - "yarn.lock"
       - ".github/workflows/playwright.yml"
