@@ -7,7 +7,7 @@ on:
       - "src/**"
       - "public/**"
       - "tsconfig.json"
-      - "webpack.config.js"
+      - "build.mjs"
       - "package.json"
       - "yarn.lock"
       - ".github/workflows/release.yml"
