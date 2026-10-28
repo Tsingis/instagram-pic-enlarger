@@ -1709,29 +1709,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/chrome@npm:^0.3.5":
-  version: 0.3.5
-  resolution: "@types/chrome@npm:0.3.5"
+"@types/chrome@npm:^0.3.6":
+  version: 0.3.6
+  resolution: "@types/chrome@npm:0.3.6"
   dependencies:
-    "@types/filesystem": "npm:*"
     "@types/har-format": "npm:*"
-  checksum: 10c0/824d673a6820d8490217a54736f53ae0d883affb5d290232cb7ef9d69e94111a25b0e3520beb5be48dc806707459ca0a08033caf30f189eac7af7a534f38a54a
-  languageName: node
-  linkType: hard
-
-"@types/filesystem@npm:*":
-  version: 0.0.36
-  resolution: "@types/filesystem@npm:0.0.36"
-  dependencies:
-    "@types/filewriter": "npm:*"
-  checksum: 10c0/3ebec32f0494b0a2612187d148e9f253ff55672c53f566d9a1e6d891eb6e2372df93c252b594b2775bc53e6660c4c37fdb05dc1b26e72b60a31010da8e1f7317
-  languageName: node
-  linkType: hard
-
-"@types/filewriter@npm:*":
-  version: 0.0.33
-  resolution: "@types/filewriter@npm:0.0.33"
-  checksum: 10c0/363ef9a658a961ceae04f52934562e4ebdcdc3a2564dd8544f593d77113c16574938b6ba4fea0bee418c37bda0668c1e03dfedb6adf00d55853f51fb3a59247b
+  checksum: 10c0/a5e67312bf8c71c141cbf25914807a3009278f19709c082da9b0e8e88ec4f07fc06a68939f160231a88821ba7b2f7565eec9d4dd49f98e9af9762f207aa66d70
   languageName: node
   linkType: hard
 
@@ -2875,7 +2858,7 @@ __metadata:
   resolution: "instagram-pic-enlarger@workspace:."
   dependencies:
     "@playwright/test": "npm:^1.64.1"
-    "@types/chrome": "npm:^0.3.5"
+    "@types/chrome": "npm:^0.3.6"
     "@types/jest": "npm:^30.0.0"
     "@types/node": "npm:^26.6.3"
     esbuild: "npm:^0.28.2"
