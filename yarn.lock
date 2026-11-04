@@ -1709,12 +1709,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/chrome@npm:^0.3.6":
-  version: 0.3.6
-  resolution: "@types/chrome@npm:0.3.6"
+"@types/chrome@npm:^0.3.7":
+  version: 0.3.7
+  resolution: "@types/chrome@npm:0.3.7"
   dependencies:
     "@types/har-format": "npm:*"
-  checksum: 10c0/a5e67312bf8c71c141cbf25914807a3009278f19709c082da9b0e8e88ec4f07fc06a68939f160231a88821ba7b2f7565eec9d4dd49f98e9af9762f207aa66d70
+  checksum: 10c0/5019eec11d621f1bdc2152ab2566fac5ddbbdf7511f1d5efb560037c41e8e54fdf5f73fd253c61bdb7ac6c251f0d2962fe671af22b1ff50011c8dd396d20f95b
   languageName: node
   linkType: hard
 
@@ -2858,7 +2858,7 @@ __metadata:
   resolution: "instagram-pic-enlarger@workspace:."
   dependencies:
     "@playwright/test": "npm:^1.64.1"
-    "@types/chrome": "npm:^0.3.6"
+    "@types/chrome": "npm:^0.3.7"
     "@types/jest": "npm:^30.0.0"
     "@types/node": "npm:^26.6.3"
     esbuild: "npm:^0.28.2"
